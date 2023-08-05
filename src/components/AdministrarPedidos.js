@@ -17,11 +17,11 @@ function AdministrarPedidos() {
 
   const [imageLogo, setImageLogo] = useState("");
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch("https://servidor-farmacia-1-production.up.railway.app/api/imageLogo")
       .then((data) => setImageLogo(data.url))
       .catch((error) => console.log(error));
-  }, []);
+  }, []);*/
 
   const [
     isOpenDetallePedidos,
@@ -51,9 +51,12 @@ function AdministrarPedidos() {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`https://servidor-farmacia-1-production.up.railway.app/api/inventario/${emp}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://servidor-farmacia-1-production.up.railway.app/api/inventario/${emp}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .catch((error) => console.log(error));
         Swal.fire("Pedido eliminado!", "", "success");
@@ -110,7 +113,9 @@ function AdministrarPedidos() {
   const [tiempoTra, setTiempoTra] = useState(0);
 
   useEffect(() => {
-    fetch("https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion")
+    fetch(
+      "https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion"
+    )
       .then((res) => res.json())
       .then((data) => setDatosConfig(data))
       .catch((error) => console.log(error));
@@ -166,11 +171,7 @@ function AdministrarPedidos() {
           <header>
             <div className="image-text">
               <span className="image">
-                {imageLogo === "" ? (
-                  <img src={Logo} alt="logo" />
-                ) : (
-                  <img src={imageLogo} alt="logo" />
-                )}
+                <img src={Logo} alt="logo" />
               </span>
               <div className="text header-text">
                 <span className="name">Farmacia ZAyOR</span>

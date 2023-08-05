@@ -28,16 +28,18 @@ function AdministrarInventario() {
 
   const [medicamento, setMedicamento] = useState([]);
   const [modificarInventario, setModificarInventario] = useState([]);
-  const [url, setUrl] = useState("https://servidor-farmacia-1-production.up.railway.app/api/inventarioActivo");
+  const [url, setUrl] = useState(
+    "https://servidor-farmacia-1-production.up.railway.app/api/inventarioActivo"
+  );
   const [busqueda, setBusqueda] = useState("");
 
   const [imageLogo, setImageLogo] = useState("");
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch("https://servidor-farmacia-1-production.up.railway.app/api/imageLogo")
       .then((data) => setImageLogo(data.url))
       .catch((error) => console.log(error));
-  }, []);
+  }, []);*/
 
   const handleChangeBusqueda = (e) => {
     setBusqueda(e.target.value);
@@ -88,9 +90,12 @@ function AdministrarInventario() {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`https://servidor-farmacia-1-production.up.railway.app/api/inventario/${emp}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://servidor-farmacia-1-production.up.railway.app/api/inventario/${emp}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .catch((error) => console.log(error));
         Swal.fire("Medicamento eliminado!", "", "success");
@@ -107,9 +112,12 @@ function AdministrarInventario() {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`https://servidor-farmacia-1-production.up.railway.app/api/activarProducto/${emp}`, {
-          method: "put",
-        })
+        fetch(
+          `https://servidor-farmacia-1-production.up.railway.app/api/activarProducto/${emp}`,
+          {
+            method: "put",
+          }
+        )
           .then((res) => res.json())
           .catch((error) => console.log(error));
         Swal.fire("Medicamento activado!", "", "success");
@@ -119,9 +127,13 @@ function AdministrarInventario() {
 
   function handleCheckbox(e) {
     if (e.target.checked) {
-      setUrl("https://servidor-farmacia-1-production.up.railway.app/api/inventario");
+      setUrl(
+        "https://servidor-farmacia-1-production.up.railway.app/api/inventario"
+      );
     } else {
-      setUrl("https://servidor-farmacia-1-production.up.railway.app/api/inventarioActivo");
+      setUrl(
+        "https://servidor-farmacia-1-production.up.railway.app/api/inventarioActivo"
+      );
     }
   }
 
@@ -170,7 +182,9 @@ function AdministrarInventario() {
   const [tiempoTra, setTiempoTra] = useState(0);
 
   useEffect(() => {
-    fetch("https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion")
+    fetch(
+      "https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion"
+    )
       .then((res) => res.json())
       .then((data) => setDatosConfig(data))
       .catch((error) => console.log(error));
@@ -226,11 +240,7 @@ function AdministrarInventario() {
           <header>
             <div className="image-text">
               <span className="image">
-                {imageLogo === "" ? (
-                  <img src={Logo} alt="logo" />
-                ) : (
-                  <img src={imageLogo} alt="logo" />
-                )}
+                <img src={Logo} alt="logo" />
               </span>
               <div className="text header-text">
                 <span className="name">Farmacia ZAyOR</span>

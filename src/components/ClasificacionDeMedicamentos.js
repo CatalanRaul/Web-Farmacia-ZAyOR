@@ -21,14 +21,16 @@ function ClasificacionDeMedicamentos() {
 
   const [imageLogo, setImageLogo] = useState("");
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch("https://servidor-farmacia-1-production.up.railway.app/api/imageLogo")
       .then((data) => setImageLogo(data.url))
       .catch((error) => console.log(error));
-  }, []);
+  }, []);*/
 
   useEffect(() => {
-    fetch("https://servidor-farmacia-1-production.up.railway.app/api/clasificacion")
+    fetch(
+      "https://servidor-farmacia-1-production.up.railway.app/api/clasificacion"
+    )
       .then((res) => res.json())
       .then((data) => setClasificacion(data))
       .catch((error) => console.log(error));
@@ -80,7 +82,9 @@ function ClasificacionDeMedicamentos() {
   const [tiempoTra, setTiempoTra] = useState(0);
 
   useEffect(() => {
-    fetch("https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion")
+    fetch(
+      "https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion"
+    )
       .then((res) => res.json())
       .then((data) => setDatosConfig(data))
       .catch((error) => console.log(error));
@@ -136,11 +140,7 @@ function ClasificacionDeMedicamentos() {
           <header>
             <div className="image-text">
               <span className="image">
-                {imageLogo === "" ? (
-                  <img src={Logo} alt="logo" />
-                ) : (
-                  <img src={imageLogo} alt="logo" />
-                )}
+                <img src={Logo} alt="logo" />
               </span>
               <div className="text header-text">
                 <span className="name">Farmacia ZAyOR</span>

@@ -20,16 +20,18 @@ function AdministrarEmpleados() {
   /*se creo el estado del empleado para poder obtenerlos de la base de datos */
   const [empleados, setEmpleados] = useState([]);
   const [modificarEmpleados, setModificarEmpleados] = useState([]);
-  const [url, setUrl] = useState("https://servidor-farmacia-1-production.up.railway.app/api/empleadosActivos");
+  const [url, setUrl] = useState(
+    "https://servidor-farmacia-1-production.up.railway.app/api/empleadosActivos"
+  );
   const [busqueda, setBusqueda] = useState("");
 
   const [imageLogo, setImageLogo] = useState("");
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch("https://servidor-farmacia-1-production.up.railway.app/api/imageLogo")
       .then((data) => setImageLogo(data.url))
       .catch((error) => console.log(error));
-  }, []);
+  }, []);*/
 
   //busqueda por curp
   const handleChangeBusqueda = (e) => {
@@ -78,9 +80,12 @@ function AdministrarEmpleados() {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`https://servidor-farmacia-1-production.up.railway.app/api/empleados/${emp}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://servidor-farmacia-1-production.up.railway.app/api/empleados/${emp}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .catch((error) => console.log(error));
         Swal.fire("Empleado eliminado!", "", "success");
@@ -102,9 +107,12 @@ function AdministrarEmpleados() {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`https://servidor-farmacia-1-production.up.railway.app/api/activarempleado/${emp}`, {
-          method: "put",
-        })
+        fetch(
+          `https://servidor-farmacia-1-production.up.railway.app/api/activarempleado/${emp}`,
+          {
+            method: "put",
+          }
+        )
           .then((res) => res.json())
           .catch((error) => console.log(error));
         Swal.fire("Empleado activado!", "", "success");
@@ -114,9 +122,13 @@ function AdministrarEmpleados() {
 
   function handleCheckbox(e) {
     if (e.target.checked) {
-      setUrl("https://servidor-farmacia-1-production.up.railway.app/api/empleados");
+      setUrl(
+        "https://servidor-farmacia-1-production.up.railway.app/api/empleados"
+      );
     } else {
-      setUrl("https://servidor-farmacia-1-production.up.railway.app/api/empleadosActivos");
+      setUrl(
+        "https://servidor-farmacia-1-production.up.railway.app/api/empleadosActivos"
+      );
     }
   }
 
@@ -155,7 +167,9 @@ function AdministrarEmpleados() {
   const [tiempoTra, setTiempoTra] = useState(0);
 
   useEffect(() => {
-    fetch("https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion")
+    fetch(
+      "https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion"
+    )
       .then((res) => res.json())
       .then((data) => setDatosConfig(data))
       .catch((error) => console.log(error));
@@ -211,11 +225,7 @@ function AdministrarEmpleados() {
           <header>
             <div className="image-text">
               <span className="image">
-                {imageLogo === "" ? (
-                  <img src={Logo} alt="logo" />
-                ) : (
-                  <img src={imageLogo} alt="logo" />
-                )}
+                <img src={Logo} alt="logo" />
               </span>
               <div className="text header-text">
                 <span className="name">Farmacia ZAyOR</span>

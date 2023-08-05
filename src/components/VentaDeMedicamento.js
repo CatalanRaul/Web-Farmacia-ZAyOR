@@ -60,11 +60,11 @@ function VentaDeMedicamento() {
 
   const [imageLogo, setImageLogo] = useState("");
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch("https://servidor-farmacia-1-production.up.railway.app/api/imageLogo")
       .then((data) => setImageLogo(data.url))
       .catch((error) => console.log(error));
-  }, []);
+  }, []);*/
 
   const [isOpenRealizarVenta, openModalRealizarVenta, closeModalRealizarVenta] =
     useModal(false);
@@ -78,7 +78,9 @@ function VentaDeMedicamento() {
   }, [listaCarrito]);
 
   useEffect(() => {
-    fetch(`https://servidor-farmacia-1-production.up.railway.app/api/inventario`)
+    fetch(
+      `https://servidor-farmacia-1-production.up.railway.app/api/inventario`
+    )
       .then((res) => res.json())
       .then((data) => setProductos(data))
       .catch((error) => console.log(error));
@@ -350,7 +352,9 @@ function VentaDeMedicamento() {
   const [tiempoTra, setTiempoTra] = useState(0);
 
   useEffect(() => {
-    fetch("https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion")
+    fetch(
+      "https://servidor-farmacia-1-production.up.railway.app/api/datosConfiguracion"
+    )
       .then((res) => res.json())
       .then((data) => setDatosConfig(data))
       .catch((error) => console.log(error));
@@ -406,11 +410,7 @@ function VentaDeMedicamento() {
           <header>
             <div className="image-text">
               <span className="image">
-                {imageLogo === "" ? (
-                  <img src={Logo} alt="logo" />
-                ) : (
-                  <img src={imageLogo} alt="logo" />
-                )}
+                <img src={Logo} alt="logo" />
               </span>
               <div className="text header-text">
                 <span className="name">Farmacia ZAyOR</span>
@@ -550,11 +550,7 @@ function VentaDeMedicamento() {
               )}
             </div>
             <div className="bottom-content">
-              {puesto === "Vendedor" ? (
-                <></>
-              ) : (
-                <></>
-              )}
+              {puesto === "Vendedor" ? <></> : <></>}
               <li className="nav-link">
                 <a href="#" onClick={() => salir()}>
                   <i className="bx bx-log-out icon"></i>
