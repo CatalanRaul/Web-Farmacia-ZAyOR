@@ -5,7 +5,7 @@ const DetallePedidos = ({ closeModalDetallePedidos, detallePedido }) => {
   const [detalle, setDetalle] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/detallePedido/${detallePedido}`)
+    fetch(`https://servidor-farmacia-1-production.up.railway.app/api/detallePedido/${detallePedido}`)
       .then((res) => res.json())
       .then((data) => setDetalle(data))
       .catch((error) => console.log(error));

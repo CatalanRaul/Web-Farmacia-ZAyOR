@@ -44,7 +44,7 @@ function DetalleVenta({ closeModalDetalleVenta, detalleVenta }) {
   //const [idVentas, fecha, descuento, total] = detalleVenta;
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/detalleVentas/${detalleVenta.idVentas}`)
+    fetch(`https://servidor-farmacia-1-production.up.railway.app/api/detalleVentas/${detalleVenta.idVentas}`)
       .then((res) => res.json())
       .then((data) => setDetalle(data))
       .catch((error) => console.log(error));

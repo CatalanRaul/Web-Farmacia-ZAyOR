@@ -5,7 +5,7 @@ function DatosFactura({ closeModalDatosFactura, detalleVenta }) {
   const [datosFactura, setDatosFactura] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/datosFactura/${detalleVenta}`)
+    fetch(`https://servidor-farmacia-1-production.up.railway.app/api/datosFactura/${detalleVenta}`)
       .then((res) => res.json())
       .then((data) => setDatosFactura(data))
       .catch((error) => console.log(error));
