@@ -1,0 +1,91 @@
+.contenedor-tabla-detalle-venta {
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  padding: 25px 10px;
+}
+
+.titulo-detalle-venta {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.titulo-detalle-venta-informcacion {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.tabla-detalle-venta {
+  width: 100%;
+  background-color: #ffffff;
+  margin: 20px 0px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 15px;
+  text-align: center;
+}
+
+.tabla-detalle-venta thead {
+  background-color: #3b8eed;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tabla-detalle-venta th,
+.tabla-detalle-venta td {
+  padding: 20px 20px;
+}
+
+.tabla-detalle-venta tbody {
+  font-size: 16px;
+  height: 50px;
+  overflow-y: auto;
+}
+
+.contenedor-botones-detalle-venta {
+  height: 45px;
+  margin: 30px 0;
+}
+
+.contenedor-botones-detalle-venta .btn-cerrar-detalle-venta {
+  height: 30px;
+  width: 150px;
+  margin-right: 20px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #e74c3c;
+}
+
+.contenedor-botones-detalle-venta .btn-cerrar-detalle-venta:hover {
+  opacity: 0.7;
+}
+
+.btn-imprimir-ticket{
+  height: 30px;
+  width: 150px;
+  margin-right: 20px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #3b8eed;
+}
+
+.btn-imprimir-ticket:hover{
+  opacity: 0.7;
+}

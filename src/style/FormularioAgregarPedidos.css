@@ -1,0 +1,198 @@
+.contenedor-principal-prdidos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=== contenedor tabla pedidos ===*/
+
+.contenedor-agregar-tabla-pedidos {
+  width: 50%;
+  height: 500px;
+  margin-top: 0px;
+  padding: 25px 10px;
+}
+
+.btn-actualizar-tabla-pedidos {
+  width: 19px;
+}
+.btn-eliminar-tabla-pedidos {
+  width: 19px;
+}
+
+.tabla-registro-pedidos {
+  width: 100%;
+  background-color: #ffffff;
+  margin: 20px 0px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 15px;
+  text-align: center;
+}
+
+.tabla-registro-pedidos thead {
+  background-color: #3b8eed;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tabla-registro-pedidos th,
+.tabla-registro-pedidos td {
+  padding: 5px 5px;
+}
+
+.tabla-registro-pedidos tbody {
+  font-size: 16px;
+  height: 50px;
+  overflow-y: auto;
+}
+
+.total-pedidos {
+  font-size: 18px;
+}
+.btn-realizar-pedido {
+  height: 30px;
+  width: 150px;
+  margin-right: 20px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #3498db;
+}
+
+.btn-realizar-pedido:hover{
+  opacity: .7;
+}
+
+.btn-cancelar-pedido{
+  height: 30px;
+  width: 150px;
+  margin-right: 20px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #e74c3c;
+}
+
+/*=== contenedor formulario pedisos ===*/
+.contenedor-formulario-pedidos {
+  width: 50%;
+  height: 500px;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-agregar-pedido {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contenedor-formulario-pedidos form .detalles-pedido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .detalles-pedido .input-box-agregar-pedido {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.detalles-pedido .input-box-agregar-pedido .detalle-pedido-text {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.detalles-pedido .input-box-agregar-pedido input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.detalles-pedido .input-box-agregar-pedido input:focus,
+.detalles-pedido .input-box-agregar-pedido input:valid {
+  border-color: #9b59b6;
+}
+
+form .contenedor-botones-pedidos {
+  height: 45px;
+  margin: 30px 0;
+}
+
+form .contenedor-botones-pedidos input {
+  height: 40px;
+  width: 200px;
+  margin-right: 20px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #3498db;
+}
+
+form .contenedor-botones-pedidos input:hover {
+  opacity: 0.7;
+}
+
+form .contenedor-botones-pedidos .btn-actualizar-pedidos {
+  height: 40px;
+  width: 100px;
+  margin-right: 20px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #f1c40f;
+}
+
+form .contenedor-botones-pedidos .btn-actualizar-pedidos:hover {
+  opacity: 0.7;
+}
+
+/*=== opciones ===*/
+
+.contenedor-opciones {
+  width: 433px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.contenedor-opciones .opciones {
+  padding: 10px 0;
+  margin-left: 10px;
+  border-bottom: 1px solid black;
+}
+
+.contenedor-opciones .opciones:hover {
+  background-color: gainsboro;
+  cursor: pointer;
+}

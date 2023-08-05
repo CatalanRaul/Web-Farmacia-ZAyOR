@@ -1,0 +1,105 @@
+.contenedor-formulario {
+  width: 100%;
+  height: 500px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-agregar-inventario {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contenedor-formulario form .detalles-medicamento {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .detalles-medicamento .input-box-agregar-inventario {
+    margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.detalles-medicamento .input-box-agregar-inventario .detalle-inventario-text {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.detalles-medicamento .input-box-agregar-inventario input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.detalles-medicamento .input-box-agregar-inventario input:focus,
+.detalles-medicamento .input-box-agregar-inventario input:valid{
+    border-color: #9b59b6;
+}
+
+form .clasificacion-detalles .clasificacion-titulo{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+form .clasificacion-detalles .input-clasificacion-inventario{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+}
+
+form .contenedor-botones{
+    height: 45px;
+    margin: 30px 0;
+
+}
+
+form .contenedor-botones input{
+    height: 40px;
+    width: 100px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background-color: #3498db;
+}
+
+form .contenedor-botones input:hover{
+    opacity: .7;
+}
+
+form .contenedor-botones .btn-cancelar{
+    height: 40px;
+    width: 100px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background-color: #e74c3c;
+}
+
+form .contenedor-botones .btn-cancelar:hover{
+    opacity: .7;
+}
+
+

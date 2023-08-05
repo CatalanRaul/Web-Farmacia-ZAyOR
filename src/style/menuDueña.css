@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #3B8EED;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+.icono-usuario{
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link{
+    text-decoration: none;
+}
+.nombreFarmacia{
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0px 30px;
+    
+}
+.contenedorLogo{
+    height: 80px;
+    padding: 0 55px;
+    line-height: 80px;
+    text-align: center;
+    display: flex;
+}
+.nav-menu{
+    display: flex;
+    margin-right: 25px;
+    list-style: none;
+}
+.btn-cerrar-sesion{
+    background-color: #CB3234;
+    color: #ffffff;
+    width: 120px;
+    height: 50px;
+    margin-top: 12px;
+    margin-right: 0px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cerrar-sesion:hover{
+    background-color: #961416;
+}
+.nav-menu-item{
+    font-size: 18px;
+    margin-top: 25px;
+    color: #ffffff;
+}
+
+/*diseño del menu*/
+
+.contenedorPrincipal-menu{
+    margin-top: 150px;
+    width: 100%;
+    height: auto;
+
+    /*agregamos flexbox style*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+
+}
+
+.menu{
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    margin: 20px;
+    min-width: 200px;
+    box-sizing: border-box;
+    font-size: 50px;
+    box-shadow: 5px 5px 5px 1px #3B8EED;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu:hover{
+    background-color: #dddddd;
+}
+
+.icono-menu{
+    width: 80px;
+    height: 80px;
+}
+.texto-menu{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/*agregamos responsividad*/
+
+@media screen and (max-width:1200px) {
+    .menu{
+        width: 40%;
+
+    }
+}
+
+@media screen and (max-width:600px) {
+    .menu{
+        width: 90%;
+        
+    }
+}

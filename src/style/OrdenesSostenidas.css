@@ -1,0 +1,48 @@
+.contenedor-ordenes-sostenidas {
+  position: relative;
+  left: 20%;
+  height: 100vh;
+  width: calc(100% - 20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.titulo-lista-pendientes {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.contenedor-tabla-ordenes {
+  width: 95%;
+  height: 400px;
+}
+.tabla-ordenes-sostenidas {
+  width: 95%;
+  background-color: #ffffff;
+  margin: 20px 15px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12px;
+  text-align: center;
+}
+
+.tabla-ordenes-sostenidas thead {
+  background-color: #3b8eed;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tabla-ordenes-sostenidas th,
+.tabla-ordenes-sostenidas td {
+  padding: 10px 3.5px;
+}
+
+.tabla-ordenes-sostenidas tbody {
+  font-size: 15px;
+  height: 50px;
+  overflow-y: auto;
+}
