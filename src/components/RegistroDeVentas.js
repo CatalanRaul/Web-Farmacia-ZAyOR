@@ -128,7 +128,7 @@ function RegistroDeVentas() {
     localStorage.getItem("temporizadorEstado")
   );
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Recuperar el estado del temporizador del localStorage al cargar el componente
     const estadoGuardado = localStorage.getItem("temporizadorEstado");
     if (estadoGuardado) {
@@ -140,9 +140,9 @@ function RegistroDeVentas() {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, []);*/
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Guardar el estado actual del temporizador en el localStorage
     localStorage.setItem("temporizadorEstado", segundos.toString());
 
@@ -150,7 +150,7 @@ function RegistroDeVentas() {
       localStorage.removeItem("pendientes");
       setSegundos(0);
     }
-  }, [segundos, tiempo]);
+  }, [segundos, tiempo]);*/
 
   if (localStorage.getItem("auth") !== null) {
     return (

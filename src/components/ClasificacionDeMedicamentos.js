@@ -109,7 +109,7 @@ function ClasificacionDeMedicamentos() {
     localStorage.getItem("temporizadorEstado")
   );
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Recuperar el estado del temporizador del localStorage al cargar el componente
     const estadoGuardado = localStorage.getItem("temporizadorEstado");
     if (estadoGuardado) {
@@ -131,7 +131,7 @@ function ClasificacionDeMedicamentos() {
       localStorage.removeItem("pendientes");
       setSegundos(0);
     }
-  }, [segundos, tiempo]);
+  }, [segundos, tiempo]);*/
 
   if (localStorage.getItem("auth") !== null) {
     return (
